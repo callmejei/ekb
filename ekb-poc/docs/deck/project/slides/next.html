@@ -1,0 +1,31 @@
+<section id="next" data-transition="fade" style="background:#0f1117;color:#e2e8f0;font-family:'Plus Jakarta Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#e0302a">Next steps</p>
+<h2 style="font-size:64px;font-weight:700;line-height:1.1;letter-spacing:-1px;color:#e2e8f0">From POC to pilot</h2>
+</div>
+<div style="display:flex;gap:40px">
+<div style="flex:1;display:flex;flex-direction:column;gap:20px;background:#161b27;border:1px solid #1e2535;border-radius:16px;padding:40px">
+<h3 style="font-size:32px;font-weight:700;color:#e2e8f0">POC limits today</h3>
+<ul style="font-size:28px;line-height:1.6;color:#a9b6c6">
+<li>Answers use an external LLM (gpt-4.1-mini)</li>
+<li>Local 7B model weak on table arithmetic</li>
+<li>Demo identities, not the bank's SSO</li>
+<li>Text PDFs only, no OCR</li>
+<li>No answer-quality benchmark yet</li>
+</ul>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:20px;background:#161b27;border:1px solid #1e2535;border-top:4px solid #e0302a;border-radius:16px;padding:40px">
+<h3 style="font-size:32px;font-weight:700;color:#e2e8f0">Proposed for the pilot</h3>
+<ul style="font-size:28px;line-height:1.6;color:#a9b6c6">
+<li>Larger LLM hosted in the bank</li>
+<li>SSO with group mapping (Keycloak)</li>
+<li>Ragas evaluation on a gold question set</li>
+<li>OCR for scanned documents</li>
+<li>Airflow, Flowable, Langfuse, Starburst</li>
+</ul>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1200px;font-size:24px;color:#5f6d80">OCBC Knowledge · Enterprise KB POC</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5f6d80;text-align:right">16</p>
+<aside>Be upfront that the POC uses OpenAI for answer generation, which departs from the spec's "no external LLM APIs" rule; embeddings already run locally, and switching the answer model to a bank-hosted one is a configuration change (LLM_BASE_URL and LLM_MODEL in .env). The framework's target components (Airflow, Flowable, Langfuse, Starburst connectors) were replaced with lighter equivalents for the POC.</aside>
+</section>

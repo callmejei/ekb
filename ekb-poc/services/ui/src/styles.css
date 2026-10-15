@@ -1,0 +1,100 @@
+/* Theme follows Prism: CSS variables set on html.theme-dark / html.theme-light, and Tailwind tokens
+ * that point at those variables, so `bg-surface` follows the active theme with no dark: variants. */
+@import "tailwindcss";
+
+@theme {
+  --color-bg: var(--c-bg);
+  --color-surface: var(--c-surface);
+  --color-surface-2: var(--c-surface-2);
+  --color-border: var(--c-border);
+  --color-text: var(--c-text);
+  --color-muted: var(--c-muted);
+  --color-input-bg: var(--c-input-bg);
+  --color-accent: #e0302a;
+  --color-accent-2: #b82420;
+  --color-success: #22c55e;
+  --color-error: #ef4444;
+  --color-warning: #f59e0b;
+  --color-info: #3b82f6;
+  --color-graph: #8b5cf6;
+
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --shadow-diffuse: 0 20px 40px -15px rgb(6 8 14 / 0.55);
+  --shadow-pop: 0 12px 32px -8px rgb(6 8 14 / 0.65);
+}
+
+html.theme-dark {
+  --c-bg: #0f1117;
+  --c-surface: #161b27;
+  --c-surface-2: #12182a;
+  --c-border: #1e2535;
+  --c-text: #e2e8f0;
+  --c-muted: #8494a7;
+  --c-input-bg: #0d1117;
+  color-scheme: dark;
+}
+
+html.theme-light {
+  --c-bg: #f0f4f8;
+  --c-surface: #ffffff;
+  --c-surface-2: #f8fafc;
+  --c-border: #dde3ed;
+  --c-text: #1a202c;
+  --c-muted: #556171;
+  --c-input-bg: #f1f5f9;
+  color-scheme: light;
+}
+
+html.theme-light {
+  --shadow-diffuse: 0 20px 40px -18px rgb(15 23 42 / 0.18);
+  --shadow-pop: 0 12px 32px -10px rgb(15 23 42 / 0.2);
+}
+
+body {
+  background: var(--c-bg);
+  color: var(--c-text);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* The chat composer shows focus on its container, so the textarea itself is excluded. */
+*:focus-visible:not(textarea) {
+  outline: 2px solid #e0302a;
+  outline-offset: 2px;
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--c-border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--c-muted); }
+
+@keyframes shimmer {
+  0% { background-position: -420px 0; }
+  100% { background-position: 420px 0; }
+}
+.shimmer {
+  background: linear-gradient(90deg, var(--c-border) 8%, var(--c-surface) 20%, var(--c-border) 32%);
+  background-size: 1200px 100%;
+  animation: shimmer 1.5s linear infinite;
+}
+
+@keyframes breathe {
+  0%, 100% { opacity: 0.35; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.35); }
+}
+.breathe { animation: breathe 2.4s cubic-bezier(0.16, 1, 0.3, 1) infinite; }
+
+.tap:active { transform: translateY(1px) scale(0.99); }
+
+.answer p { margin: 0 0 0.6em; }
+.answer ul { margin: 0 0 0.6em 1.1em; list-style: disc; }
+.answer ol { margin: 0 0 0.6em 1.1em; list-style: decimal; }
+.answer li { margin-bottom: 0.2em; }
+.answer strong { font-weight: 700; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}

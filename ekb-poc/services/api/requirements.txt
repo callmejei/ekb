@@ -1,0 +1,15 @@
+fastapi==0.115.6
+uvicorn[standard]==0.32.1
+python-multipart==0.0.20
+pydantic==2.10.4
+pydantic-settings==2.7.0
+psycopg[binary,pool]==3.2.3
+httpx==0.28.1
+elasticsearch==8.15.1
+neo4j==5.26.0
+fsspec==2024.12.0
+s3fs==2024.12.0
+pymupdf==1.25.1
+sqlglot==26.0.1
+pytest==8.3.4
+trino==0.331.0

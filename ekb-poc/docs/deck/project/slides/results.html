@@ -1,0 +1,32 @@
+<section id="results" data-transition="fade" style="background:#161b27;color:#e2e8f0;font-family:'Plus Jakarta Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:56px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#e0302a">Results</p>
+<h2 style="font-size:64px;font-weight:700;line-height:1.1;letter-spacing:-1px;color:#e2e8f0">What we verified</h2>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:32px">
+<div style="display:flex;flex-direction:column;gap:16px;background:#0f1117;border:1px solid #232b3d;border-radius:16px;padding:40px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:96px;font-weight:600;line-height:1;color:#e0302a">20/20</p>
+<p style="font-size:28px;line-height:1.4;color:#e2e8f0"><b>Security checks pass</b></p>
+<p style="font-size:24px;line-height:1.5;color:#a9b6c6">No restricted content via search, graph or SQL; injection attempts blocked.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px;background:#0f1117;border:1px solid #232b3d;border-radius:16px;padding:40px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:96px;font-weight:600;line-height:1;color:#e0302a">16/16</p>
+<p style="font-size:28px;line-height:1.4;color:#e2e8f0"><b>Unit tests pass</b></p>
+<p style="font-size:24px;line-height:1.5;color:#a9b6c6">Core pipeline logic and the SQL guard.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px;background:#0f1117;border:1px solid #232b3d;border-radius:16px;padding:40px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:96px;font-weight:600;line-height:1;color:#e0302a">4</p>
+<p style="font-size:28px;line-height:1.4;color:#e2e8f0"><b>Approval steps</b></p>
+<p style="font-size:24px;line-height:1.5;color:#a9b6c6">With segregation of duties, duplicate checks and version supersede.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px;background:#0f1117;border:1px solid #232b3d;border-radius:16px;padding:40px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:96px;font-weight:600;line-height:1;color:#e0302a">4–7s</p>
+<p style="font-size:28px;line-height:1.4;color:#e2e8f0"><b>Typical answer time</b></p>
+<p style="font-size:24px;line-height:1.5;color:#a9b6c6">Observed in demo runs, document and data routes.</p>
+</div>
+</div>
+<p style="font-size:24px;line-height:1.5;color:#a9b6c6">Corpus: 10 synthetic documents (67 chunks) and 2 synthetic data marts. No confidential data used.</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1200px;font-size:24px;color:#5f6d80">OCBC Knowledge · Enterprise KB POC</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5f6d80;text-align:right">15</p>
+<aside>The security test and unit tests can be rerun live with .\ekb.ps1 security-test and .\ekb.ps1 test. Timings: about 5.8 seconds for the car loan answer, 3.6 seconds for Erin's question and about 6.4 seconds for the SQL trend, all with gpt-4.1-mini.</aside>
+</section>

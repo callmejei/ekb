@@ -1,0 +1,39 @@
+<section id="arch" data-transition="fade" style="background:#0f1117;color:#e2e8f0;font-family:'Plus Jakarta Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:36px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#e0302a">Architecture</p>
+<h2 style="font-size:64px;font-weight:700;line-height:1.1;letter-spacing:-1px;color:#e2e8f0">Two flows: publish knowledge, then ask it</h2>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#8494a7">Publish</p>
+<div style="display:flex;align-items:center;gap:16px">
+<div style="flex:1;display:flex;flex-direction:column;gap:8px;background:#161b27;border:1px solid #1e2535;border-radius:14px;padding:24px"><h3 style="font-size:28px;font-weight:700;color:#e2e8f0">Upload</h3><p style="font-size:24px;line-height:1.35;color:#a9b6c6">PDF and metadata from a Requestor</p></div>
+<x-shape kind="arrow-right" style="background:#e0302a;width:40px;height:20px"></x-shape>
+<div style="flex:1;display:flex;flex-direction:column;gap:8px;background:#161b27;border:1px solid #1e2535;border-radius:14px;padding:24px"><h3 style="font-size:28px;font-weight:700;color:#e2e8f0">Approve</h3><p style="font-size:24px;line-height:1.35;color:#a9b6c6">Steward, Owner, Custodian in PostgreSQL</p></div>
+<x-shape kind="arrow-right" style="background:#e0302a;width:40px;height:20px"></x-shape>
+<div style="flex:1;display:flex;flex-direction:column;gap:8px;background:#161b27;border:1px solid #1e2535;border-radius:14px;padding:24px"><h3 style="font-size:28px;font-weight:700;color:#e2e8f0">Land</h3><p style="font-size:24px;line-height:1.35;color:#a9b6c6">MinIO lake: raw, processed, curated</p></div>
+<x-shape kind="arrow-right" style="background:#e0302a;width:40px;height:20px"></x-shape>
+<div style="flex:1;display:flex;flex-direction:column;gap:8px;background:#161b27;border:1px solid #1e2535;border-radius:14px;padding:24px"><h3 style="font-size:28px;font-weight:700;color:#e2e8f0">Process</h3><p style="font-size:24px;line-height:1.35;color:#a9b6c6">Extract, enrich, chunk, embed</p></div>
+<x-shape kind="arrow-right" style="background:#e0302a;width:40px;height:20px"></x-shape>
+<div style="flex:1;display:flex;flex-direction:column;gap:8px;background:#161b27;border:1px solid #1e2535;border-radius:14px;padding:24px"><h3 style="font-size:28px;font-weight:700;color:#e2e8f0">Index</h3><p style="font-size:24px;line-height:1.35;color:#a9b6c6">Elasticsearch chunks, Neo4j graph</p></div>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#8494a7">Ask</p>
+<div style="display:flex;align-items:center;gap:16px">
+<div style="flex:1;display:flex;flex-direction:column;gap:8px;background:#161b27;border:1px solid #1e2535;border-radius:14px;padding:24px"><h3 style="font-size:28px;font-weight:700;color:#e2e8f0">Question</h3><p style="font-size:24px;line-height:1.35;color:#a9b6c6">With the user's access groups</p></div>
+<x-shape kind="arrow-right" style="background:#3b82f6;width:40px;height:20px"></x-shape>
+<div style="flex:1;display:flex;flex-direction:column;gap:8px;background:#161b27;border:1px solid #1e2535;border-radius:14px;padding:24px"><h3 style="font-size:28px;font-weight:700;color:#e2e8f0">Route</h3><p style="font-size:24px;line-height:1.35;color:#a9b6c6">Documents, data or both</p></div>
+<x-shape kind="arrow-right" style="background:#3b82f6;width:40px;height:20px"></x-shape>
+<div style="flex:1;display:flex;flex-direction:column;gap:8px;background:#161b27;border:1px solid #1e2535;border-radius:14px;padding:24px"><h3 style="font-size:28px;font-weight:700;color:#e2e8f0">Retrieve</h3><p style="font-size:24px;line-height:1.35;color:#a9b6c6">Hybrid search and graph, or Trino SQL</p></div>
+<x-shape kind="arrow-right" style="background:#3b82f6;width:40px;height:20px"></x-shape>
+<div style="flex:1;display:flex;flex-direction:column;gap:8px;background:#161b27;border:1px solid #1e2535;border-radius:14px;padding:24px"><h3 style="font-size:28px;font-weight:700;color:#e2e8f0">Answer</h3><p style="font-size:24px;line-height:1.35;color:#a9b6c6">LLM writes it with citations</p></div>
+<x-shape kind="arrow-right" style="background:#3b82f6;width:40px;height:20px"></x-shape>
+<div style="flex:1;display:flex;flex-direction:column;gap:8px;background:#161b27;border:1px solid #1e2535;border-radius:14px;padding:24px"><h3 style="font-size:28px;font-weight:700;color:#e2e8f0">Audit</h3><p style="font-size:24px;line-height:1.35;color:#a9b6c6">Query, SQL and model call logged</p></div>
+</div>
+</div>
+<p style="font-size:24px;line-height:1.4;color:#a9b6c6"><b style="color:#e2e8f0">Access filter inside every query</b> in Elasticsearch, Cypher and SQL. Stack: FastAPI, React, PostgreSQL, MinIO, Elasticsearch, Neo4j, Trino, Ollama (BGE-M3), all in Docker.</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1200px;font-size:24px;color:#5f6d80">OCBC Knowledge · Enterprise KB POC</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#5f6d80;text-align:right">3</p>
+<aside>Publish flow: a document is only indexed after all four approvals. The file moves through lake zones in MinIO: staging, raw, processed (markdown and tables) and curated (chunks). The pipeline extracts with PyMuPDF, enriches with the LLM (summary, entities, key info), chunks to 400 to 800 tokens without splitting tables, embeds with BGE-M3 locally, and indexes into Elasticsearch and Neo4j. A new version supersedes the old one automatically.
+Ask flow: a router picks documents, data or both. Documents use keyword plus vector search merged by reciprocal rank fusion, then graph expansion. Data uses text-to-SQL through Trino with a SQL guard. The answer model is gpt-4.1-mini for the POC; embeddings stay local.</aside>
+</section>

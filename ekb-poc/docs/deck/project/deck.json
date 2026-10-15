@@ -1,0 +1,19 @@
+{
+  "v": 4,
+  "createdOnFiles": {"v": 1, "at": "2026-10-13T14:45:00Z"},
+  "lists": "css",
+  "title": "OCBC Knowledge Base POC Demo",
+  "order": ["cover", "goals", "arch", "signin", "upload", "approvals", "library", "answer", "graph", "data", "trimming", "neo4j", "audit", "statement", "results", "next"],
+  "sections": {
+    "intro": {"description": "What the POC sets out to prove and how it is built", "start": "cover"},
+    "govern": {"description": "Governed intake: upload, maker-checker approval, library", "start": "signin"},
+    "ask": {"description": "Asking questions: cited answers, graph context and the SQL data route", "start": "answer"},
+    "trust": {"description": "Trust: security trimming, the knowledge graph and the audit trail", "start": "trimming"},
+    "close": {"description": "Results and next steps", "start": "statement"}
+  },
+  "faces": {
+    "plus-jakarta-sans": {"family": "Plus Jakarta Sans", "href": "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"},
+    "jetbrains-mono": {"family": "JetBrains Mono", "href": "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap"}
+  },
+  "designSystems": []
+}
